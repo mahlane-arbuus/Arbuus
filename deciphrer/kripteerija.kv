@@ -1,0 +1,32 @@
+<MyGrid>
+
+    message: message
+    output: output
+
+    GridLayout:
+        cols: 1
+        size: root.width-10, root.height-10
+        pos: 5, 5
+            
+        TextInput:
+            id: message
+            text: "Kirjuta siia sõnum:"
+            font_name: "ARIALUNI.ttf"
+            
+        GridLayout:
+            cols: 2
+            
+            Button:
+                text: "ENKRÜPTEERI"
+                on_press: root.encrypt_button()
+                size: 20, 20
+                
+            Button:
+                text: "DEKRÜPTEERI"
+                on_press: root.decrypt_button()
+                size: 20, 20
+                
+        TextInput:
+            id: output
+            text: "Siia ilmub tulemus."
+            font_name: "ARIALUNI.ttf"
